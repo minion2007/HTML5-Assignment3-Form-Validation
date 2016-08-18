@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Assignment3-Form handling and validation</title>
+ <style>
+  .main{
+    background-color:#FFA07A;
+    width:30%;
+    margin:auto;
+    padding:5px 5px 5px 5px;
+    border-radius:10px;}
+
+  #header{
+    text-align:center;
+    font:Arial,Tahoma;}
+
+  .login{
+    margin:10px 10px 10px 90px;
+    width:60%;
+    border-radius:5px;
+    box-shadow:3px 3px 3px inset black;}
+
+  .color{
+    margin:10px 10px 10px 90px;}
+
+  .age{
+    margin:10px 10px 10px 80px;}
+
+  #hobbies{
+    margin:10px 10px 10px 190px;
+	}
+
+  .submitbtn{
+    margin:10px 10px 10px 90px;
+    cursor:pointer;}
+	
+	
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1 id="header">Fill the Form</h1>
+    <form ="action_page.php" method="get" id="form1">
+     <input type="email" name="email" required class="login" placeholder="email" autocomplete="off" autofocus><br><br>
+     <input type="password" name="password" required pattern=".{6,}" title="Must contain minimum 6 characters" class="login" placeholder="password"><br><br>
+     <input type="url" name="project" required pattern="https?://.+"class="login" placeholder="project url"><br><br>
+     <input type="date" name="completeddate" required pattern="\d{1,2}/\d{1,2}/\d{4}"class="login" placeholder="completion date"><br><br>
+     <input type="month" name="cmonth" required class="login" placeholder="current month"><br><br>
+     <input type="week" name="cweek" required class="login" placeholder="current week"> <br><br>
+     <input type="time" name="ctime" required class="login" pattern="\d{1,2}:\d{1,2}([ap]m)?" placeholder="currrent time"><br><br>
+     <label class="color">Select color</label><input type="color" name="color" class="color"><br><br>
+     <label class="age">Age</label><input type="range" name="age" class="age" step="5" min="15" max="60">(15-60)<br><br>
+        <input type="text" list="hobbies" class="login" Placeholder="Hobbies">
+	     <datalist id="hobbies">
+       <option value="Travelling"></option>
+       <option value="Painting"></option>
+       <option value="Dancing"></option>
+       <option value="Gardening"></option>
+       <option value="Reading"></option>
+       </datalist><br><br>
+    <input type="submit" class="submitbtn" value="submit query" a href="#"></a>
+    </form>
+    </div>
+</body>
+</html>
